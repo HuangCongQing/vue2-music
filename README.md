@@ -1,5 +1,8 @@
 # vue2.0-music
 
+[![标签](https://img.shields.io/teamcity/codebetter/bt428.svg)]() [![标签](https://img.shields.io/npm/v/@cycle/core.svg)]() [![标签](https://img.shields.io/npm/dm/localeval.svg)]()
+
+
 > Vue.js 打造高级实战——音乐 App
 Vue2.0 云音乐播放器，QQ音乐API，可听QQ音乐高品质付费歌曲。 
 
