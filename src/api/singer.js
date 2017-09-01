@@ -1,5 +1,8 @@
 import jsonp from 'common/js/jsonp'
-import {commonParams, options} from './config'
+import {
+  commonParams,
+  options
+} from './config'
 
 export function getSingerList() {
   const url = 'https://c.y.qq.com/v8/fcg-bin/v8.fcg'
@@ -12,9 +15,10 @@ export function getSingerList() {
     pagenum: 1,
     hostUin: 0,
     needNewCode: 0,
-    platform: 'yqq'
+    platform: 'yqq',
+    g_tk: '1144967816'
   })
-
+  console.log('------jsonp中data:', data)
   return jsonp(url, data, options)
 }
 
@@ -34,4 +38,3 @@ export function getSingerDetail(singerId) {
 
   return jsonp(url, data, options)
 }
-

@@ -63,3 +63,40 @@ mounted(){
 * loading组件
 
 * 垂直居中`transform: translateY(-50%)`
+
+## 歌手页面开发问题（左侧歌手列表，右侧字母列表）
+
+类似联系人列表
+0. 嵌套数组
+1. 联动（滑动歌手，对应字母高亮）
+2. 点击字母，歌手自动到某位置
+3. 左侧歌手向上下滑动时，对应部分的字母固定不变
+4. 字母排序问题（sort()）
+
+* [es6 javascript对象方法Object.assign()](http://blog.csdn.net/qq_30100043/article/details/53422657)
+后面参数会覆盖前面参数
+
+* [forEach 方法 (Array) (JavaScript)](http://www.cnblogs.com/joyco773/p/6113748.html)
+
+*引入类
+ [ES6入门 —— Class和Module](http://blog.csdn.net/u014695532/article/details/51815025)
+
+* 排序
+.sort()
+https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
+[JS知识点：js中sort()方法的用法，参数以及排序原理](https://segmentfault.com/a/1190000000410506)
+
+* concat() 方法用于连接两个或多个数组。
+
+*　[js 数组 map方法](http://www.cnblogs.com/xuan52rock/p/4460949.html)
+
+*　[HTML5触摸事件(touchstart、touchmove和touchend)](http://blog.csdn.net/fuqinyijiu/article/details/41315123)
+
+＊ref
+>ref 被用来给元素或子组件注册引用信息。引用信息将会注册在父组件的 $refs 对象上。如果在普通的 DOM 元素上使用，引用指向的就是 DOM 元素; 如果用在子组件上，引用就指向组件实例:
+当 v-for 用于元素或组件的时候，引用信息将是包含 DOM 节点或组件实例的数组。
+
+* vue中在date和props中会检测数据的变化，create()不会
+
+* parseInt(this.touch.anchorIndex) + delta
+不能字符串相加，要转成整型

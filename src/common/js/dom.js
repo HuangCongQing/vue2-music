@@ -19,6 +19,7 @@ export function addClass(el, className) {
   console.log('el.className = newClass.join -------', el.className)
 }
 
+// listview.vue中使用
 export function getData(el, name, val) {
   const prefix = 'data-'
   if (val) {
