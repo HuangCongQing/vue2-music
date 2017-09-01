@@ -6,6 +6,27 @@
 > Vue.js 打造高级实战——音乐 App
 Vue2.0 云音乐播放器，QQ音乐API，可听QQ音乐高品质付费歌曲。 
 
+
+## 项目截图
+
+![vue2-music](http://ojmcn9nlw.qnssl.com/blog/20170901/173812115.png?imageslim)
+
+### 安装与运行
+
+```
+git clone https://github.com/HuangCongqing/vue2-music.git
+
+cd vue-music
+
+npm install
+
+npm run dev //服务端运行 访问 http://localhost:8080
+
+npm run build 项目打包 
+
+感兴趣的童鞋可以来个star
+
+
 ## 项目树
 ```
 .
@@ -147,24 +168,5 @@ Vue2.0 云音乐播放器，QQ音乐API，可听QQ音乐高品质付费歌曲。
     └── 5.png
 
 ```
-
-## 项目截图
-
-![vue2-music](http://ojmcn9nlw.qnssl.com/blog/20170901/173812115.png?imageslim)
-
-### 安装与运行
-
-```
-git clone https://github.com/HuangCongqing/vue2-music.git
-
-cd vue-music
-
-npm install
-
-npm run dev //服务端运行 访问 http://localhost:8080
-
-npm run build 项目打包 
-
-感兴趣的童鞋可以来个star
 
 # vue-music
