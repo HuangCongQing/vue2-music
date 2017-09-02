@@ -1,5 +1,5 @@
 <template>
-  <!-- ===================================================probeType,data都是scroll中的值？ -->
+  <!-- ===================================================probeType,data都是scroll.vue中的值？ -->
   <scroll @scroll="scroll" :listen-scroll="listenScroll" :probe-type="probeType" :data="data" class="listview" ref="listview">
     <ul>
       <li v-for="group in data" class="list-group" ref="listGroup">
@@ -104,6 +104,7 @@ export default {
     scroll(pos) {
       this.scrollY = pos.y
     },
+    // 计算高度
     _calculateHeight() {
       this.listHeight = []
       const list = this.$refs.listGroup
@@ -134,6 +135,7 @@ export default {
         this._calculateHeight()
       }, 20)
     },
+    // 判断滑动所处位置
     scrollY(newY) {
       const listHeight = this.listHeight
       // 当滚动到顶部，newY>0

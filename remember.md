@@ -2,6 +2,9 @@
 
 标签（空格分隔）： 未分类
 
+
+>vuejs怎么在服务器部署？build前的配置，防止js、css文件路径错误
+在目录build下面找到webpack.prod.conf.js文件，找到output节点，添加【publicPath:'./'】
 ---
 
 * alias 配置别名

@@ -1,6 +1,7 @@
 // see http://vuejs-templates.github.io/webpack for documentation.
 var path = require('path')
 module.exports = {
+  // cnpm run build中的配置
   build: {
     env: require('./prod.env'),
     port: 9000,

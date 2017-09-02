@@ -10,7 +10,7 @@
             <div v-for="item in recommends">
               <a :href="item.linkUrl">
                 <!-- class="needsclick",解决fastclick冲突问题 ，若不添加，则点击不能跳转链接-->
-                <img @load="loadImage" :src="item.picUrl">
+                <img @load="loadImage" :src="item.picUrl" class="needsclick">
               </a>
             </div>
           </slider>

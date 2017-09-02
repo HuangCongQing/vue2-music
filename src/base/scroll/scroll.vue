@@ -52,9 +52,9 @@ export default {
         probeType: this.probeType,
         click: this.click
       })
-
       if (this.listenScroll) {
         let me = this
+        // 监听scroll事件，派发scroll事件
         this.scroll.on('scroll', (pos) => {
           me.$emit('scroll', pos)
         })
