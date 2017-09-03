@@ -28,6 +28,14 @@ npm run build 项目打包
 
 ```
 
+### TO DO
+
+* listview.vue下的scrollY函数
+
+* 部分接口线上404错误
+
+* 
+
 ## 项目树
 ```
 .

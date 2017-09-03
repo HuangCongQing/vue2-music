@@ -19,6 +19,7 @@
         </li>
       </ul>
     </div>
+    <!-- 字母区块固定 -->
     <div class="list-fixed" ref="fixed" v-show="fixedTitle">
       <div class="fixed-title">{{fixedTitle}} </div>
     </div>
@@ -61,6 +62,7 @@ export default {
     return {
       scrollY: -1,
       currentIndex: 0,
+      // diff,标题固定问题
       diff: -1
     }
   },
@@ -69,6 +71,7 @@ export default {
     this.listenScroll = true
     this.touch = {}
     this.listHeight = []
+    console.log('---------listview.vue中this:', this)
   },
   methods: {
     selectItem(item) {
@@ -103,6 +106,7 @@ export default {
     },
     scroll(pos) {
       this.scrollY = pos.y
+      // scrollY变化是根据scroll()
     },
     // 计算高度
     _calculateHeight() {
@@ -117,7 +121,8 @@ export default {
       }
     },
     _scrollTo(index) {
-      if (!index && index !== 0) {
+      // 点击字母区块，判断边界问题
+      if (!index && index !== 0) {   // 字母上下有两个点击是null的地方
         return
       }
       if (index < 0) {
@@ -132,11 +137,12 @@ export default {
   watch: {
     data() {
       setTimeout(() => {
-        this._calculateHeight()
+        this._calculateHeight()   // Dom渲染好了，计算高度
       }, 20)
     },
-    // 判断滑动所处位置
+    // 判断滑动所处位置,newY从哪来？？？？？？？？？？？？？？，插件自带？、
     scrollY(newY) {
+      console.log('scrollY:', newY)
       const listHeight = this.listHeight
       // 当滚动到顶部，newY>0
       if (newY > 0) {
@@ -147,9 +153,10 @@ export default {
       for (let i = 0; i < listHeight.length - 1; i++) {
         let height1 = listHeight[i]
         let height2 = listHeight[i + 1]
+        console.log('height2: ', height2)
         if (-newY >= height1 && -newY < height2) {
           this.currentIndex = i
-          this.diff = height2 + newY
+          this.diff = TITLE_HEIGHT + newY
           return
         }
       }
@@ -157,11 +164,14 @@ export default {
       this.currentIndex = listHeight.length - 2
     },
     diff(newVal) {
+      console.log('newVal', newVal)
+      // TITLE_HEIGHT==30px
       let fixedTop = (newVal > 0 && newVal < TITLE_HEIGHT) ? newVal - TITLE_HEIGHT : 0
       if (this.fixedTop === fixedTop) {
         return
       }
       this.fixedTop = fixedTop
+      // 添加样式，顶上去this.$refs.fixed.style.transform = `translate3d(0,${fixedTop}px,0)`
       this.$refs.fixed.style.transform = `translate3d(0,${fixedTop}px,0)`
     }
   },
