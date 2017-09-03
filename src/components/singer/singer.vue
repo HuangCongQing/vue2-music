@@ -1,5 +1,6 @@
 <template>
   <div class="singer" ref="singer">
+    <!-- 从listview.vue传过来的数据$emit() -->
     <list-view @select="selectSinger" :data="singers" ref="list"></list-view>
     <router-view></router-view>
   </div>
@@ -37,6 +38,7 @@ export default {
       this.$router.push({
         path: `/singer/${singer.id}`
       })
+      // 把数据放到vuex中管理。通过mutations往state写了一些东西
       this.setSinger(singer)
     },
     _getSingerList() {
@@ -96,6 +98,7 @@ export default {
       return hot.concat(ret)  // concat() 方法用于连接两个或多个数组。
     },
     ...mapMutations({
+      // 语法糖映射带setSinger，常量对应类似函数
       setSinger: 'SET_SINGER'
     })
   },

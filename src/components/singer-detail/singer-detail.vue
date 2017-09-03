@@ -20,7 +20,7 @@
         return this.singer.avatar
       },
       ...mapGetters([
-        'singer'
+        'singer'   // 对应getters中的singer
       ])
     },
     data() {

@@ -71,7 +71,7 @@ export default new Router({
     {
       path: '/singer',
       component: Singer,
-      children: [
+      children: [  // 子路由跳转
         {
           path: ':id',
           component: SingerDetail
