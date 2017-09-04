@@ -59,7 +59,7 @@ npm run build 项目打包
 ├── prod.server.js
 ├── src
 │   ├── App.vue
-│   ├── api
+│   ├── api                       // 获取的数据及处理都在api其中
 │   │   ├── config.js
 │   │   ├── rank.js
 │   │   ├── recommend.js
@@ -110,7 +110,7 @@ npm run build 项目打包
 │   │   │   └── music-icon.woff
 │   │   ├── image
 │   │   │   └── default.png
-│   │   ├── js
+│   │   ├── js                        // 组件中用到的一些方法
 │   │   │   ├── cache.js
 │   │   │   ├── config.js
 │   │   │   ├── dom.js

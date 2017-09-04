@@ -32,19 +32,23 @@ export default class Song {
   }
 }
 
+// 抽象出来一个工厂方法
 export function createSong(musicData) {
+  console.log('musicData.singer:', musicData.singer)
   return new Song({
     id: musicData.songid,
     mid: musicData.songmid,
     singer: filterSinger(musicData.singer),
     name: musicData.songname,
     album: musicData.albumname,
-    duration: musicData.interval,
+    duration: musicData.interval,   // 歌曲时长
     image: `https://y.gtimg.cn/music/photo_new/T002R300x300M000${musicData.albummid}.jpg?max_age=2592000`,
-    url: `http://ws.stream.qqmusic.qq.com/${musicData.songid}.m4a?fromtag=46`
+    // url: `http://ws.stream.qqmusic.qq.com/${musicData.songid}.m4a?fromtag=46`   // QQ音乐播放器地址
+    url: `http://ws.stream.qqmusic.qq.com/${musicData.songid}.m4a?fromtag=46`   // QQ音乐播放器地址
   })
 }
 
+// singer是一个数组,将一首歌中两个人提取出来
 function filterSinger(singer) {
   let ret = []
   if (!singer) {
@@ -53,6 +57,7 @@ function filterSinger(singer) {
   singer.forEach((s) => {
     ret.push(s.name)
   })
+  console.log('singer字符串：', ret.join('/'))
   return ret.join('/')
 }
 

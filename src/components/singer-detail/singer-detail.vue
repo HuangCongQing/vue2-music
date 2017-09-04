@@ -33,13 +33,17 @@
     },
     methods: {
       _getDetail() {
+        // 如果刷新了，没获取到数据，则回到歌手页面
         if (!this.singer.id) {
           this.$router.push('/singer')
           return
         }
+        // 获取歌手详情信息
         getSingerDetail(this.singer.id).then((res) => {
           if (res.code === ERR_OK) {
+            console.log('获取的原汁原味songs:', res.data.list)
             this.songs = this._normalizeSongs(res.data.list)
+            console.log('信息Songs:', this.songs)
           }
         })
       },
@@ -47,8 +51,9 @@
         let ret = []
         list.forEach((item) => {
           let {musicData} = item
+          // 判断musicData.songid && musicData.albummid是必有的
           if (musicData.songid && musicData.albummid) {
-            ret.push(createSong(musicData))
+            ret.push(createSong(musicData))      // import {createSong} from 'common/js/song'
           }
         })
         return ret

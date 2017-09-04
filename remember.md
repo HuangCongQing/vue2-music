@@ -104,3 +104,28 @@ https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects
 
 * parseInt(this.touch.anchorIndex) + delta
 不能字符串相加，要转成整型
+
+*［【vue】组件的使用（3）自定义事件$on/$emit］（https://github.com/Kelichao/vue.js.2.0/issues/19）
+* probeType??????????/
+* 符合条件加类名
+:class="{'current':currentIndex===index}
+
+* 固定标题栏
+
+### 歌手详情页
+* 页面切换-
+    * 路由不是一个新页面，只是一个层，z-index盖住了
+    * 转场动画（vue自带）
+
+* ES6反引号
+```
+ this.$router.push({
+        path: `/singer/${singer.id}`
+      })
+```
+* vuex
+mutations是唯一可以修改state
+
+* QQ音乐播放器地址查找（有问题）
+https://y.qq.com/n/yqq/singer/002J4UUk29y8BY.html#
+
