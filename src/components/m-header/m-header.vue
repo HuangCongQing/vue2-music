@@ -31,7 +31,7 @@
       height: 32px
       margin-right: 9px
       // 导入图片
-      bg-image('logo')
+      bg-image('panda')
       background-size: 30px 32px
     .text
       display: inline-block
