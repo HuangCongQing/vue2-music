@@ -4,6 +4,7 @@
       <i class="icon-back"></i>
     </div>
     <h1 class="title" v-html="title"></h1>
+    <!--:style="bgStyle" 数据传入头像，学会 -->
     <div class="bg-image" :style="bgStyle" ref="bgImage">
       <div class="play-wrapper">
         <div ref="playBtn" v-show="songs.length>0" class="play" @click="random">
@@ -40,6 +41,7 @@
 
   export default {
     mixins: [playlistMixin],
+    // 通过props接收数据
     props: {
       bgImage: {
         type: String,
@@ -73,6 +75,7 @@
       this.listenScroll = true
     },
     mounted() {
+      // 背景图的高度
       this.imageHeight = this.$refs.bgImage.clientHeight
       this.minTransalteY = -this.imageHeight + RESERVED_HEIGHT
       this.$refs.list.$el.style.top = `${this.imageHeight}px`

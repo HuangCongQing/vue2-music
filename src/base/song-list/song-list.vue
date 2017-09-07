@@ -7,7 +7,7 @@
         </div>
         <div class="content">
           <h2 class="name">{{song.name}}</h2>
-          <p class="desc">{{getDesc(song)}}</p>
+          <p class="desc">{{getDesc(song)}}</p> <!--函数传数据-->
         </div>
       </li>
     </ul>

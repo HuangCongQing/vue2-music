@@ -90,7 +90,7 @@ npm run build 项目打包
 │   │   │   └── search-list.vue
 │   │   ├── slider
 │   │   │   └── slider.vue
-│   │   ├── song-list
+│   │   ├── song-list                 //歌曲列表，复用
 │   │   │   ├── first@2x.png
 │   │   │   ├── first@3x.png
 │   │   │   ├── second@2x.png
@@ -136,7 +136,7 @@ npm run build 项目打包
 │   │   │   ├── logo@3x.png
 │   │   │   └── m-header.vue
 │   │   ├── music-list
-│   │   │   └── music-list.vue
+│   │   │   └── music-list.vue         // 列表，是singer-detail中的子组件
 │   │   ├── player
 │   │   │   └── player.vue
 │   │   ├── playlist

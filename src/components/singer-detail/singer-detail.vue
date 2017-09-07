@@ -20,7 +20,7 @@
         return this.singer.avatar
       },
       ...mapGetters([
-        'singer'   // 对应getters中的singer
+        'singer'   // 对应getters中的singer，数据在singer.vue中存进去的
       ])
     },
     data() {

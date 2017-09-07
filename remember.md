@@ -96,7 +96,7 @@ https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects
 
 *　[HTML5触摸事件(touchstart、touchmove和touchend)](http://blog.csdn.net/fuqinyijiu/article/details/41315123)
 
-＊ref
+* ref
 >ref 被用来给元素或子组件注册引用信息。引用信息将会注册在父组件的 $refs 对象上。如果在普通的 DOM 元素上使用，引用指向的就是 DOM 元素; 如果用在子组件上，引用就指向组件实例:
 当 v-for 用于元素或组件的时候，引用信息将是包含 DOM 节点或组件实例的数组。
 
@@ -129,3 +129,27 @@ mutations是唯一可以修改state
 * QQ音乐播放器地址查找（有问题）
 https://y.qq.com/n/yqq/singer/002J4UUk29y8BY.html#
 
+### music-list.vue组件
+
+* music-list组件放在music-list.vue中
+
+* 通过props接收数据（父组件向子组件传值）
+
+* 传sytle
+```
+:style="bgStyle"
+
+computed: {
+      bgStyle() {
+        return `background-image:url(${this.bgImage})`
+      }
+    },
+```
+
+### song-list(base下)组件-可复用
+
+* 函数也可以传数据，还能处理呢
+
+`{{getDesc(song)}}`
+
+* ref控制传递图片高度
