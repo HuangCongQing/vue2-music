@@ -9,7 +9,7 @@ function findIndex(list, song) {
   })
 }
 
-export const selectPlay = function ({commit, state}, {list, index}) {
+export const selectPlay = function ({commit, state}, {list, index}) {  // 播放器设置
   commit(types.SET_SEQUENCE_LIST, list)
   if (state.mode === playMode.random) {
     let randomList = shuffle(list)

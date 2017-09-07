@@ -145,7 +145,7 @@
       percent() {
         return this.currentTime / this.currentSong.duration
       },
-      ...mapGetters([
+      ...mapGetters([      // 引入mapGetters,是个数组
         'currentIndex',
         'fullScreen',
         'playing'

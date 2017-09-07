@@ -1,3 +1,4 @@
+// getters对数据的映射，可以是个函数，
 export const singer = state => state.singer
 
 export const playing = state => state.playing
@@ -12,7 +13,7 @@ export const mode = state => state.mode
 
 export const currentIndex = state => state.currentIndex
 
-export const currentSong = (state) => {
+export const currentSong = (state) => {     // 计算属性，当前播放曲目
   return state.playlist[state.currentIndex] || {}
 }
 
