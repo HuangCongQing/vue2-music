@@ -166,4 +166,6 @@ computed: {
 
 * 播放器放在APP.vue 下面
 
-* mapGetters,是个数组
+* mapGetters,mapActions是个数组
+
+* 多次提交mutations ,往往会封装一个actions

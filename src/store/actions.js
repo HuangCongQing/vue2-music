@@ -10,10 +10,10 @@ function findIndex(list, song) {
 }
 
 export const selectPlay = function ({commit, state}, {list, index}) {  // 播放器设置
-  commit(types.SET_SEQUENCE_LIST, list)
+  commit(types.SET_SEQUENCE_LIST, list)        // set_sequence
   if (state.mode === playMode.random) {
     let randomList = shuffle(list)
-    commit(types.SET_PLAYLIST, randomList)
+    commit(types.SET_PLAYLIST, randomList)     // set_playList
     index = findIndex(randomList, list[index])
   } else {
     commit(types.SET_PLAYLIST, list)

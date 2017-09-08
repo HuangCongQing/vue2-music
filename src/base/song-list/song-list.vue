@@ -1,8 +1,8 @@
 <template>
   <div class="song-list">
     <ul>
-      <!-- 点击传参及索引 -->
-      <li @click="selectItem(song, index)" class="item" v-for="(song, index) in songs">
+      <!-- 点击传参及索引 --> <!--点击播放,跳转-->
+      <li @click="selectItem(song, index)" class="item" v-for="(song, index) in songs">   
         <div class="rank" v-show="rank">
           <span :class="getRankCls(index)" v-text="getRankText(index)"></span>
         </div>
