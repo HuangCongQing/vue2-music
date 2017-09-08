@@ -155,10 +155,10 @@
       this.touch = {}
     },
     methods: {
-      back() {
+      back() {  // 返回缩小全屏
         this.setFullScreen(false)
       },
-      open() {
+      open() {      // 打开全屏
         this.setFullScreen(true)
       },
       enter(el, done) {
@@ -402,7 +402,7 @@
         }
       },
       ...mapMutations({
-        setFullScreen: 'SET_FULL_SCREEN'
+        setFullScreen: 'SET_FULL_SCREEN'       //引用修改播放全屏，还是小屏
       }),
       ...mapActions([
         'savePlayHistory'
