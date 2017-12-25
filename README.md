@@ -178,4 +178,16 @@ npm run build 项目打包
 
 ```
 
+###开源许可证 License AGPLv3
+
+>开源是一种精神，vue2-music的开源更是人的一种进步
+
+>开源是自由的，而不是免费的。Free(自由) is not free(免费)
+请认真阅读并遵守以下开源协议
+
+AGPLv3 [GNU Affero General Public License v3.0](https://github.com/HuangCongQing/vue2-music/blob/master/LICENSE)
+
+此外，代码仅作学习vue所用，禁止私用，违者必究
+
+
 # vue2-music
