@@ -93,7 +93,7 @@
         this.$router.back()
       },
       selectItem(item, index) {
-        this.selectPlay({    // 引用 selectPlay
+        this.selectPlay({    // 引用 selectPlay，将song 的数据传到list里面
           list: this.songs,
           index
         })
