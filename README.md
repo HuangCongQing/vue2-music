@@ -9,7 +9,7 @@
 
 ## 项目截图
 
-![vue2-music](http://ojmcn9nlw.qnssl.com/ai/20170907/165749070.png?imageslim)
+![vue2-music](https://upload-images.jianshu.io/upload_images/4340772-6388d1448806267e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 ### 安装与运行
 
